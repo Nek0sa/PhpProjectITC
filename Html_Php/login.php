@@ -1,7 +1,46 @@
 <?php
 session_start();
 
-if (array_key_exists('User', $_POST))
+$servername = "localhost";
+$username = "root";
+$password = "Roottest";
+$dbname = "xampp";
+// Create connection
+$conn = new mysqli($servername, $username, $password,$dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+
+if (array_key_exists('form_send', $_POST)){
+    $DB_User = null;
+    $DB_Password = null;
+    $DB_IsAdmin = null;
+    $User = $_POST["User"];
+    $Password = $_POST["Password"];
+    $stmt = $conn->prepare("Select * From test where testname =?");
+    $stmt->bind_param("s", $User);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
+        $DB_User = $row['testname'];
+        $DB_Password = $row['password'];
+        $DB_IsAdmin = $row['admin'];
+    }
+    if($DB_User == $User){
+        if($DB_Password == $Password){
+            $_SESSION['User'] = $User;
+            $_SESSION['LoggedIn'] = true;
+            $_SESSION['Password'] =$Password;
+            $_SESSION['isAdmin'] = $DB_IsAdmin;
+            header($_SESSION['FromURL']);
+        }
+    }
+
+}
 ?>
 <html>
 <head>
@@ -12,7 +51,7 @@ if (array_key_exists('User', $_POST))
 <div style=" height: 100%;width: 100%;display: flex;align-items: center;justify-content: center">
     <p>Account login</p>
     <div style="border-color: #5c636a;border-style: solid;">
-        <form method="post" action="PHP_Process/process_login.php">
+        <form method="post" action="">
             <input type="hidden" name="form_send"/>
             <div class="form-group">
                 <label class="form-group" for="User">Benutzername</label>

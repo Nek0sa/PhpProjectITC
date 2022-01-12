@@ -10,21 +10,19 @@ if (array_key_exists('form_send', $_POST)){
     $DB_IsAdmin = null;
     $User = $_POST["User"];
     $Password = $_POST["Password"];
-    $stmt = $conn->prepare("Select * From test where testname =?");
+    $stmt = $conn->prepare("Select * From benutzer where `E-Mail` = ?");
     $stmt->bind_param("s", $User);
     $stmt->execute();
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
-        $DB_User = $row['testname'];
-        $DB_Password = $row['password'];
-        $DB_IsAdmin = $row['admin'];
+        $DB_User = $row['E-Mail'];
+        $DB_Password = $row['Passwort'];
     }
     if($DB_User == $User){
         if($DB_Password == $Password){
             $_SESSION['User'] = $User;
             $_SESSION['LoggedIn'] = true;
             $_SESSION['Password'] =$Password;
-            $_SESSION['isAdmin'] = $DB_IsAdmin;
             header($_SESSION['FromURL']);
         }
     }

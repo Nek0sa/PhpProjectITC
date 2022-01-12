@@ -5,7 +5,7 @@ create table artikel (`artikelid` int,`Bezeichnung` varchar(40),`preis` decimal(
 
 Drop database if exists webshop;
 CREATE SCHEMA `webshop` ;
-USE webshop
+USE webshop;
 
 CREATE TABLE `adresse` (
                 `Adress_id` INT NOT NULL,

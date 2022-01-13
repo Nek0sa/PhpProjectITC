@@ -1,27 +1,12 @@
 <?php
-class Artikel {
-    public $name;
-    public $price;
-    public $salePrice;
-    public $description;
-    public $icon;
-    public $pic;
+require $_SERVER['DOCUMENT_ROOT']."/Html_Php/Templates/artikel.php";
 
-    public function __construct($name, $price, $salePrice, $description, $icon, $pic) {
-        $this->name = $name;
-        $this->price = $price;
-        $this->salePrice = $salePrice;
-        $this->escription = $description;
-        $this->icon = $icon;
-        $this->pic = $pic;
-    }
-
-}
-
-$item1 = new Artikel("Artikel1", 100, 10, "Dies ist ein guter Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
-$item2 = new Artikel("Artikel2", 500, 15, "Dies ist ein top Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
+$item1 = new Artikel("Artikel1", 100, 15, "Dies ist ein guter Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
+$item2 = new Artikel("Artikel2", 500, 10, "Dies ist ein top Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
 
 $items = array($item1, $item2);
+
+usort($items, fn($b, $a) => strcmp($a->name, $b->name));
 
 foreach ($items as $item) {
     echo "<div class=\"col mb-5\">

@@ -2,7 +2,7 @@
 
 Drop database if exists webshop;
 CREATE SCHEMA `webshop` ;
-USE webshop
+USE webshop;
 
 CREATE TABLE `adresse` (
                 `Adress_id` INT NOT NULL,

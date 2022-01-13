@@ -10,7 +10,7 @@ class Artikel {
     public function __construct($name, $price, $salePrice, $description, $icon, $pic) {
         $this->name = $name;
         $this->price = $price;
-        $this->alePrice = $salePrice;
+        $this->salePrice = $salePrice;
         $this->escription = $description;
         $this->icon = $icon;
         $this->pic = $pic;
@@ -19,7 +19,7 @@ class Artikel {
 }
 
 $item1 = new Artikel("Artikel1", 100, 10, "Dies ist ein guter Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
-$item2 = new Artikel("Artikel2", 500, "15", "Dies ist ein top Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
+$item2 = new Artikel("Artikel2", 500, 15, "Dies ist ein top Artikel", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
 
 $items = array($item1, $item2);
 

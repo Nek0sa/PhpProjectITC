@@ -9,10 +9,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">All Products</a></li>
+                        <li><a class="dropdown-item" href="homeindex.php">All Products</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        <li><input class="dropdown-item" type="submit" name="name_asc" value="Name asc"/></li>
+                        <li><input class="dropdown-item" type="submit" name="name_desc" value="Name desc"/></li>
+                        <li><input class="dropdown-item" type="submit" name="price_asc" value="Price asc"/></li>
+                        <li><input class="dropdown-item" type="submit" name="price_desc" value="Price desc"/></li>
                     </ul>
                 </li>
             </ul>

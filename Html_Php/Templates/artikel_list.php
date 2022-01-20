@@ -7,7 +7,7 @@ $item3 = new Artikel("Parkett Rustikal kanadischer Ahorn 18,5x25 cm", 57.06, 37.
 $item4 = new Artikel("Parkett Rustikal Eiche Urban 18,5x25 cm", 66.06, 46.06, "Dies ist ein top Artikel", "../../assets/icon4.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
 $item5 = new Artikel("Parkett Rustikal Eiche Naturöl 18,5x25 cm", 65.52, 45.52, "Dies ist ein guter Artikel", "../../assets/icon5.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
 $item6 = new Artikel("Parkett Living Eiche Graphit 18,5x25 cm", 47.23, 27.23, "Dies ist ein top Artikel", "../../assets/icon6.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
-$item7 = new Artikel("Parkett Natur Eiche matt 18,5x25 cm", 75.80, 55.80, "Dies ist ein guter Artikel", "../../assets/icon7.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
+$item7 = new Artikel("Parkett Natur Eiche matt 18,5x25 cm", 75.80, 55.89, "Dies ist ein guter Artikel", "../../assets/icon7.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
 $item8 = new Artikel("Parkett Rustikal Eiche lackiert 18,5x25 cm", 81.63, 61.63, "Dies ist ein top Artikel", "../../assets/icon8.jpg", "https://dummyimage.com/450x300/dee2e6/6c757d.jpg");
 
 $items = array($item1, $item2, $item3, $item4, $item5, $item6, $item7, $item8);

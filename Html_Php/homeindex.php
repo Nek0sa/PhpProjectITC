@@ -12,6 +12,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
+        <script type="text/javascript" src="../js/home_scripts.js"></script>
     </head>
     <body>
         <!-- Navigation-->
@@ -29,7 +30,7 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div id="items" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <?php include ("../js/artikel_list.js")?>
+                    <?php include ("./Templates/artikel_list.php")?>
                 </div>
             </div>
         </section>
@@ -38,6 +39,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="../js/home_scripts.js"></script>
+
     </body>
 </html>
